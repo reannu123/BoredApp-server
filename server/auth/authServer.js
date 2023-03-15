@@ -23,9 +23,9 @@ authApp.use(
   })
 );
 
-authApp.post("/login", UsersController.loginUser);
-authApp.post("/register", UsersController.registerUser);
-authApp.delete("/logout", UsersController.logoutUser);
+authApp.post("/auth/login", UsersController.loginUser);
+authApp.post("/auth/register", UsersController.registerUser);
+authApp.delete("/auth/logout", UsersController.logoutUser);
 
 authApp.listen(process.env.PORT_AUTH, () =>
   console.log(`Auth Server Started at ${process.env.PORT_AUTH}`)
